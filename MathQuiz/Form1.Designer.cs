@@ -90,6 +90,7 @@
             this.plusLeftLabel.TabIndex = 2;
             this.plusLeftLabel.Text = "?";
             this.plusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.plusLeftLabel.Click += new System.EventHandler(this.plusLeftLabel_Click);
             // 
             // label1
             // 
@@ -183,6 +184,7 @@
             this.MinusLeftLabel.TabIndex = 7;
             this.MinusLeftLabel.Text = "?";
             this.MinusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MinusLeftLabel.Click += new System.EventHandler(this.MinusLeftLabel_Click);
             // 
             // Product
             // 
@@ -288,6 +290,7 @@
             this.DividendLeftLabel.TabIndex = 17;
             this.DividendLeftLabel.Text = "?";
             this.DividendLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DividendLeftLabel.Click += new System.EventHandler(this.DividendLeftLabel_Click);
             // 
             // StartButton
             // 
