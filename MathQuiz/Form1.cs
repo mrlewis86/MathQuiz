@@ -12,9 +12,25 @@ namespace MathQuiz
 {
     public partial class Form1 : Form
     {
+        Random RandomNum = new Random(); //creates random object
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Product_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -50,6 +50,7 @@
             this.DividendRightLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.DividendLeftLabel = new System.Windows.Forms.Label();
+            this.StartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Product)).BeginInit();
@@ -60,22 +61,23 @@
             // 
             this.timeLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel1.Location = new System.Drawing.Point(614, 23);
+            this.timeLabel1.Location = new System.Drawing.Point(388, 7);
             this.timeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeLabel1.Name = "timeLabel1";
-            this.timeLabel1.Size = new System.Drawing.Size(200, 30);
+            this.timeLabel1.Size = new System.Drawing.Size(139, 52);
             this.timeLabel1.TabIndex = 0;
             this.timeLabel1.Text = "label1";
+            this.timeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label2
             // 
-            this.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(390, 22);
+            this.Label2.Location = new System.Drawing.Point(226, 21);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(190, 31);
+            this.Label2.Size = new System.Drawing.Size(155, 28);
             this.Label2.TabIndex = 1;
-            this.Label2.Text = "Time Remaining";
+            this.Label2.Text = "Time Remaining :";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // plusLeftLabel
@@ -128,7 +130,7 @@
             this.sum.Location = new System.Drawing.Point(551, 90);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 35);
-            this.sum.TabIndex = 6;
+            this.sum.TabIndex = 2;
             // 
             // Difference
             // 
@@ -136,7 +138,7 @@
             this.Difference.Location = new System.Drawing.Point(551, 163);
             this.Difference.Name = "Difference";
             this.Difference.Size = new System.Drawing.Size(100, 35);
-            this.Difference.TabIndex = 11;
+            this.Difference.TabIndex = 3;
             // 
             // label3
             // 
@@ -188,7 +190,8 @@
             this.Product.Location = new System.Drawing.Point(551, 247);
             this.Product.Name = "Product";
             this.Product.Size = new System.Drawing.Size(100, 35);
-            this.Product.TabIndex = 16;
+            this.Product.TabIndex = 4;
+            this.Product.ValueChanged += new System.EventHandler(this.Product_ValueChanged);
             // 
             // label8
             // 
@@ -240,7 +243,7 @@
             this.Quotient.Location = new System.Drawing.Point(551, 347);
             this.Quotient.Name = "Quotient";
             this.Quotient.Size = new System.Drawing.Size(100, 35);
-            this.Quotient.TabIndex = 21;
+            this.Quotient.TabIndex = 5;
             // 
             // label12
             // 
@@ -286,11 +289,24 @@
             this.DividendLeftLabel.Text = "?";
             this.DividendLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // StartButton
+            // 
+            this.StartButton.AutoSize = true;
+            this.StartButton.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Location = new System.Drawing.Point(305, 404);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(113, 43);
+            this.StartButton.TabIndex = 1;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 477);
+            this.ClientSize = new System.Drawing.Size(781, 477);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.Quotient);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.DividendRightLabel);
@@ -316,11 +332,13 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "MathQuiz";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Difference)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Product)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Quotient)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -348,6 +366,7 @@
         private System.Windows.Forms.Label DividendRightLabel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label DividendLeftLabel;
+        private System.Windows.Forms.Button StartButton;
     }
 }
 
