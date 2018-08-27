@@ -15,6 +15,8 @@ namespace MathQuiz
         Random randomizer = new Random();
         int addend1;
         int addend2;
+        int timeLeft;
+
 
         public void StartTheQuiz()
         {
@@ -27,6 +29,10 @@ namespace MathQuiz
 
             
             sum.Value = 0;
+
+            timeLeft = 15;
+            timeLabel1.Text = "15 seconds";
+            timer1.Start();
         }
         public Form1()
         {
@@ -35,7 +41,8 @@ namespace MathQuiz
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            StartTheQuiz();
+            StartButton.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,6 +68,23 @@ namespace MathQuiz
         private void DividendLeftLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                timeLabel1.Text = timeLeft + "seconds";
+            }
+            else
+            {
+                timer1.Stop();
+                timeLabel1.Text = "No More Time!!!";
+                MessageBox.Show("You weren't quick enough!!!");
+                sum.Value = addend1 + addend2;
+                StartButton.Enabled = true;
+            }
         }
     }
 }

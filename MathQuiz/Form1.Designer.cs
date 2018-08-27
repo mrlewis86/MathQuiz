@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.timeLabel1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.DividendLeftLabel = new System.Windows.Forms.Label();
             this.StartButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Product)).BeginInit();
@@ -60,13 +62,13 @@
             // timeLabel1
             // 
             this.timeLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.timeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel1.Location = new System.Drawing.Point(388, 7);
             this.timeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeLabel1.Name = "timeLabel1";
             this.timeLabel1.Size = new System.Drawing.Size(139, 52);
             this.timeLabel1.TabIndex = 0;
-            this.timeLabel1.Text = "label1";
+            this.timeLabel1.Text = "15  seconds";
             this.timeLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label2
@@ -304,6 +306,11 @@
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +377,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label DividendLeftLabel;
         private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
